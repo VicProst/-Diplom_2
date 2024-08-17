@@ -10,7 +10,7 @@ faker = Faker()
 @allure.step('Зарегистрировать нового пользователя и вернуть его email, password и name')
 def register_new_user_and_return_email_password():
     email_pass = []
-    email = faker.email()
+    email = 'test123' + faker.email()
     password = faker.password(length=6, special_chars=True, digits=True, upper_case=True, lower_case=True)
     name = faker.name()
     payload = {"email": email, "password": password, "name": name}
